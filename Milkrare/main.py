@@ -15,9 +15,11 @@ class cattlemilkingdays(BaseModel):
 async def hello_home():
     return "Welcome to the feed API!"
     
-@api.post('/api/satish')
+@api.post('/api/Haptik')
 async def cattlemilkingdays(request:cattlemilkingdays):
     response_json = connector1.milking(request.dict())
     return response_json
+if __name__ == '__main__':
+    uvicorn.run(api,host='127.0.0.1',port=8000)
 
-server = uvicorn.run(api)
+#server = uvicorn.run(api)
