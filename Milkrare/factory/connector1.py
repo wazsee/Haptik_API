@@ -4,7 +4,8 @@ import os
 
 def milking(request_json):
     try:
-        df = pd.read_csv(r"C:\Users\satishkumar.s\Desktop\Milkrare\factory\Haptikdata.csv",encoding='latin-1')
+        #df = pd.read_csv(r"C:\Users\satishkumar.s\Desktop\Milkrare\factory\Haptikdata.csv",encoding='latin-1')
+        df = pd.read_csv(curr_dir + '/factory/Haptikdata.csv')
         print("df")
         
 
