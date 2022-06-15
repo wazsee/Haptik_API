@@ -5,7 +5,8 @@ import os
 def milking(request_json):
     try:
         #df = pd.read_csv(r"C:\Users\satishkumar.s\Desktop\Milkrare\factory\Haptikdata.csv",encoding='latin-1')
-        df = pd.read_csv('Haptik_API-main/Milkrare/factory/Haptikdata.csv')
+        #df = pd.read_csv('Haptik_API-main/Milkrare/factory/Haptikdata.csv')
+        df = pd.read_csv('https://github.com/wazsee/Haptik_API/blob/8ae1f0c3d8313c965d3de47b6b71f5bae53a0988/Milkrare/factory/Haptikdata.csv')
         print("df")
         
 
