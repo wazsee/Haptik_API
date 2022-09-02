@@ -8,7 +8,7 @@ import pandas as pd
 
 api = FastAPI()
 class cattlemilkingdays(BaseModel):
-    Phone_Number : int
+    MobileNumber : int
 
 
 @api.get('/api/')
