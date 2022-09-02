@@ -6,7 +6,7 @@ def milking(request_json):
     try:
         #df = pd.read_csv(r"C:\Users\satishkumar.s\Desktop\Milkrare\factory\Haptikdata.csv",encoding='latin-1')
         #df = pd.read_csv('Haptik_API-main/Milkrare/factory/Haptikdata.csv')
-        url = "https://raw.githubusercontent.com/wazsee/Haptik_API/main/Milkrare/factory/Haptikdata.csv"
+        url = "https://github.com/wazsee/Haptik_API/blob/main/Milkrare/factory/Haptik_finaldata.csv?raw=true"
         df = pd.read_csv(url)
 
         #df = pd.read_csv('Milkrare/factory/Haptikdata.csv')
@@ -17,20 +17,19 @@ def milking(request_json):
         #request_json['Milk1_Dry2'] = 1 if request_json['Milk1_Dry2'] == "milk" else 2
 
         response_values = df.loc[
-            (df['Phone_Number']==request_json['Phone_Number'])
+            (df['MobileNumber']==request_json['MobileNumber'])
             ]
         print(df.head())
 
         
         response = {}
         #response['Farmer Name'] = response_values['Farmer Name'].values[0]
-        response['Region Name'] = response_values['Region Name'].values[0]
-        response['District Name'] = response_values['District Name'].values[0]
-        response['Pin Code'] = response_values['Pin Code'].values[0] 
-        #response['Plant Name'] = response_values['Plant Name'].values[0]
-        response['Plant Code'] =int(response_values['Plant Code'].values[0])
-        response['MCC Name'] = response_values['MCC Name'].values[0]
-        response['MCC Code'] = int(response_values['MCC Code'].values[0])
+        response['RegionName'] = response_values['RegionName'].values[0]
+        response['PlantCode'] = response_values['PlantCode'].values[0]
+        response['PlantName'] = response_values['PlantName'].values[0] 
+        response['MCCCode'] = response_values['MCCCode'].values[0]
+        response['MCCName'] =int(response_values['MCCName'].values[0])
+        
         
         
 
